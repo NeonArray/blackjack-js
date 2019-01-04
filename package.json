@@ -1,0 +1,22 @@
+{
+    "name": "blackjack",
+    "version": "1.0.0",
+    "description": "A game of blackjack",
+    "main": "index.js",
+    "author": "Aaron Arney",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "lint": "eslint src && echo 'Lint complete.'",
+        "test": "babel-tape-runner src/*.test.js | faucet",
+        "watch": "watch 'clear && npm run -s test && npm run lint' src",
+        "verify": "npm run -s test && npm run -s lint",
+        "precommit": "npm run verify"
+    },
+    "devDependencies": {
+        "babel-tape-runner": "^3.0.0",
+        "eslint": "^5.11.1",
+        "tape": "^4.9.2",
+        "watch": "^1.0.2"
+    }
+}
